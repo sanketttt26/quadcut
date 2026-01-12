@@ -53,7 +53,7 @@ function App() {
   };
 
   return (
-    <div className={`flex flex-col w-full ${state.slices.length === 0 ? 'h-screen overflow-hidden' : 'min-h-screen'}`}>
+    <div className={`flex flex-col w-full min-h-screen ${state.slices.length === 0 ? 'lg:h-screen lg:overflow-hidden' : ''}`}>
       <Header />
 
       <main className="flex-1 w-full max-w-6xl mx-auto px-6 flex flex-col items-center justify-center">

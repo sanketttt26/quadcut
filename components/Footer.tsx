@@ -4,8 +4,8 @@ import { Heart, ExternalLink } from 'lucide-react';
 export const Footer: React.FC = () => {
   return (
     <footer className="w-full border-t border-white/5 bg-[#09090b] mt-auto">
-      <div className="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-500">
-        
+      <div className="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-zinc-500">
+
         <div className="flex items-center gap-1.5 order-2 md:order-1">
           <span>Made with</span>
           <Heart className="w-3.5 h-3.5 text-cyan-500 fill-cyan-500" />
@@ -21,9 +21,9 @@ export const Footer: React.FC = () => {
           <span>100% client-side</span>
         </div>
 
-        <a 
+        <a
           href="https://x.com/gxjo_dev"
-          target="_blank" 
+          target="_blank"
           className="flex items-center gap-1.5 hover:text-white transition-colors order-3"
         >
           Follow on X <ExternalLink className="w-3 h-3" />

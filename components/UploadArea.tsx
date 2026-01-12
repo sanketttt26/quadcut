@@ -66,8 +66,8 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
 
   return (
     <div className="w-full max-w-2xl mx-auto animate-slide-up">
-      <div className="text-center mb-10 space-y-2">
-        <h1 className="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 pb-2">
+      <div className="text-center mb-6 space-y-2">
+        <h1 className="text-4xl md:text-6xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 pb-2">
           QuadCut
         </h1>
         <p className="text-lg text-zinc-400">
@@ -85,7 +85,7 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
         className={`
           relative group cursor-pointer
           border-2 border-dashed rounded-3xl transition-all duration-300 ease-in-out
-          h-80 flex flex-col items-center justify-center gap-4
+          h-64 flex flex-col items-center justify-center gap-4
           ${isDragging
             ? 'border-cyan-500 bg-cyan-500/10 scale-[1.02]'
             : 'border-zinc-800 hover:border-zinc-600 bg-[#0c0c0e] hover:bg-[#121214]'
@@ -126,7 +126,7 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
         )}
       </div>
 
-      <div className="mt-8 flex justify-center">
+      <div className="mt-6 flex justify-center">
         <button
           onClick={handleDemo}
           disabled={isProcessing}
