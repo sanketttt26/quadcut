@@ -22,7 +22,7 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
   const handleDrop = useCallback((e: React.DragEvent) => {
     e.preventDefault();
     setIsDragging(false);
-    
+
     if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
       const file = e.dataTransfer.files[0];
       if (validateFile(file)) {
@@ -73,6 +73,9 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
         <p className="text-lg text-zinc-400">
           Create viral split grids for X in seconds
         </p>
+        <p className="text-sm text-zinc-500 mt-2">
+          Note: Please use the web version of X (Twitter) when posting these grids to ensure they display correctly.
+        </p>
       </div>
 
       <div
@@ -83,8 +86,8 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
           relative group cursor-pointer
           border-2 border-dashed rounded-3xl transition-all duration-300 ease-in-out
           h-80 flex flex-col items-center justify-center gap-4
-          ${isDragging 
-            ? 'border-cyan-500 bg-cyan-500/10 scale-[1.02]' 
+          ${isDragging
+            ? 'border-cyan-500 bg-cyan-500/10 scale-[1.02]'
             : 'border-zinc-800 hover:border-zinc-600 bg-[#0c0c0e] hover:bg-[#121214]'
           }
         `}
@@ -110,7 +113,7 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
             `}>
               <Upload className="w-8 h-8" />
             </div>
-            
+
             <div className="text-center space-y-2">
               <h3 className="text-xl font-semibold text-white">
                 Drop your artwork here
@@ -124,7 +127,7 @@ export const UploadArea: React.FC<UploadAreaProps> = ({ onFileSelect, isProcessi
       </div>
 
       <div className="mt-8 flex justify-center">
-        <button 
+        <button
           onClick={handleDemo}
           disabled={isProcessing}
           className="flex items-center gap-2 text-zinc-500 hover:text-white transition-colors text-sm px-4 py-2 rounded-full hover:bg-zinc-800"
